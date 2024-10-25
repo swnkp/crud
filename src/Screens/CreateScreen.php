@@ -37,6 +37,10 @@ class CreateScreen extends CrudScreen
             Button::make($this->resource::createButtonLabel())
                 ->method('save')
                 ->icon('bs.check-circle'),
+
+            Button::make(__('Previous Page'))
+                ->method('cancel')
+                ->icon('bs.backspace'),
         ];
     }
 

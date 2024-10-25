@@ -72,6 +72,10 @@ class ViewScreen extends CrudScreen
                 ->canSee($this->isSoftDeleted() && $this->can('restore'))
                 ->method('restore')
                 ->icon('bs.arrow-clockwise'),
+
+            Button::make(__('Previous Page'))
+                ->method('cancel')
+                ->icon('bs.backspace'),
         ];
     }
 

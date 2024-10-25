@@ -234,4 +234,14 @@ abstract class CrudScreen extends Screen
     {
         return $this->resource::softDeletes() && $this->model->trashed();
     }
+
+    /**
+     * @param RestoreRequest $request
+     *
+     * @return RedirectResponse
+     */
+    public function cancel(RestoreRequest $request)
+    {
+        return redirect()->route('platform.resource.list', $request->resource);
+    }
 }
