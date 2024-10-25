@@ -87,6 +87,7 @@ class ListScreen extends CrudScreen
     private function getTableActions(Model $model): Group
     {
         return Group::make([
+            /*
             Link::make(__('View'))
                 ->icon('bs.eye')
                 ->canSee($this->can('view', $model))
@@ -94,7 +95,7 @@ class ListScreen extends CrudScreen
                     $this->resource::uriKey(),
                     $model->getAttribute($model->getKeyName()),
                 ]),
-
+            */
             Link::make(__('Edit'))
                 ->icon('bs.pencil')
                 ->canSee($this->can('update', $model))
